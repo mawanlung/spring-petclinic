@@ -10,7 +10,7 @@ pipeline {
         }
       }
       steps {
-        sh 'mvn clean install'
+        sh 'mvn -Dmaven.repo.local=/Users/macos/.m2/repository/ clean install'
       }
     }
     stage('Docker Build') {
